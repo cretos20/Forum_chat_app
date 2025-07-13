@@ -13,8 +13,8 @@ export default function Navbar({ home = false }) {
         </Link>
         <div className="hidden md:flex space-x-8 text-sm font-medium justify-center items-center">
           <Link href={"/"} className="hover:text-yellow-400">Home</Link>
-          <Link href="/" className="hover:text-yellow-400">Forums</Link>
-          <Link href={"/"} className="hover:text-yellow-400">UserChat</Link>
+          <Link href="/Forums" className="hover:text-yellow-400">Forums</Link>
+          <Link href={"/Userchat"} className="hover:text-yellow-400">UserChat</Link>
           <UserButton/>
         </div>
         <button className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
@@ -25,8 +25,8 @@ export default function Navbar({ home = false }) {
       {open && (
         <div className="md:hidden bg-green-800 px-6 pb-4 space-y-2 text-sm">
           <Link href="/" className="block hover:text-yellow-400">Home</Link>
-          <Link href="/" className="block hover:text-yellow-400">Forums</Link>
-          <Link href="/" className="block hover:text-yellow-400">UserChat</Link>
+          <Link href="/Forums" className="block hover:text-yellow-400">Forums</Link>
+          <Link href="/Userchat" className="block hover:text-yellow-400">UserChat</Link>
         </div>
       )}
     </nav>
