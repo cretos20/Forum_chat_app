@@ -1,37 +1,37 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from "@/components/ui/button"
-import { Link } from 'lucide-react';
+import Link from 'next/link';
 const topics = [
   {
     text: "Python",
     img: "/python.webp",
-    desc: "Lets discuss everything related to Python",
-    slug: "Python-discuss"
+    desc: "Let’s discuss Python – code, tips, tricks, and more.",
+    slug: "python-chat-new"
   },
   {
     text: "JavaScript",
     img: "/js.webp",
-    desc: "Learn and share JavaScript knowledge.",
-    slug: "Javascript-discuss"
+    desc: "Learn and share JavaScript knowledge every single day.",
+    slug: "js-chat-new"
   },
   {
     text: "React",
     img: "/react.webp",
-    desc: "Build amazing user interfaces with React.",
-    slug: "React-discuss"
+    desc: "Build stunning interfaces using the power of React.",
+    slug: "react-chat-new"
   },
   {
     text: "CSS",
     img: "/css.webp",
-    desc: "Explore the world of designing and CSS.",
-    slug: "CSS-discuss"
+    desc: "Explore web design and CSS to craft beautiful pages.",
+    slug: "css-chat-new"
   },
   {
-    text: "Web Development",
+    text: "Web",
     img: "/webd.webp",
-    desc: "All things web development – front to back.",
-    slug: "Web-Development-discuss"
+    desc: "All things web dev – frontend to backend, start to finish.",
+    slug: "web-chat-new"
   }
 ];
 
@@ -51,13 +51,13 @@ const Forums = () => {
             <Image
               alt={topic.desc}
               src={topic.img}
-              width={74}
-              height={74}
+              width={85}
+              height={85}
               className=""
             />
             <h2 className="text-2xl">{topic.text}</h2>
             <p className="px-3">{topic.desc}</p>
-            <Link href={`/forum/${topic.slug}`}>
+            <Link href={`/Individual_forum/${topic.slug}`}>
             <Button className="px-4 border border-slate-300 py-2">
               Discuss now
             </Button>

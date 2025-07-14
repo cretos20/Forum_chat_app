@@ -2,8 +2,11 @@
 import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { useState } from "react";
+// import { useUser } from "@clerk/nextjs";
 
 export default function Navbar({ home = false }) {
+  // const user=useUser()
+  // console.log(user.user?.id)
   const [open, setOpen] = useState(false);
   return (
     <nav className="bg-black text-white fixed w-full z-50 shadow-md">
@@ -13,8 +16,8 @@ export default function Navbar({ home = false }) {
         </Link>
         <div className="hidden md:flex space-x-8 text-sm font-medium justify-center items-center">
           <Link href={"/"} className="hover:text-yellow-400">Home</Link>
-          <Link href="/Forums" className="hover:text-yellow-400">Forums</Link>
-          <Link href={"/Userchat"} className="hover:text-yellow-400">UserChat</Link>
+          <Link href={"/Forums"} className="hover:text-yellow-400">Forums</Link>
+          {/* <Link href={"/Userchat"} className="hover:text-yellow-400">UserChat</Link> */}
           <UserButton/>
         </div>
         <button className="md:hidden text-2xl" onClick={() => setOpen(!open)}>

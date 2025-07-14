@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 export default function HomeFeatures() {
   return (
@@ -15,12 +16,10 @@ export default function HomeFeatures() {
           <p className="mb-10 text-lg sm:text-xl text-gray-50">
             Discover vibrant topic forums, real-time chats, and engaging communities across tech, hobbies, and ideas.
           </p>
-          <a
-            href="/"
+          <Link
+            href="/Forums"
             className="inline-block bg-yellow-400 text-green-950 font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-yellow-300 transition"
-          >
-            Get Started
-          </a>
+          >Get Started</Link>
         </div>
       </section>
 
