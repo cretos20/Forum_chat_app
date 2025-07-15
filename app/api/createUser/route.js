@@ -6,15 +6,17 @@ export const dynamic = "force-dynamic";
 const api_key = process.env.STREAM_API_KEY;
 const api_secret = process.env.STREAM_API_SECRET;
 
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 // const user_id = "user_2zjt74SpZT00jspH0e6b2O3NTUW";
 export async function POST(request) {
     const serverClient = StreamChat.getInstance(api_key, api_secret);
     const user = await request.json();
 
-    function capitalize(str) {
-        return str.charAt(0).toUpperCase() + str.slice(1);
+    if (!user?.data?.id) {
+        return new Response("User ID missing", { status: 400 });
     }
-
 
     // Create User Token
     const token = serverClient.createToken(user.data.id);
